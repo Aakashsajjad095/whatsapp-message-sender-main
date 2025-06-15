@@ -5,11 +5,18 @@
 }
 
 :root {
-  --white: #D4D5D6;
-  --bg: #090E11;
-  --green: #056162;
-  --gray-100: #6A6A6A;
-  --gray-200: #2A2F32;
+  --white: #FFFFFF;
+  --bg: #F0F2F5;
+  --primary: #25D366;
+  --primary-dark: #128C7E;
+  --secondary: #34B7F1;
+  --text-primary: #111B21;
+  --text-secondary: #667781;
+  --surface: #FFFFFF;
+  --surface-variant: #F0F2F5;
+  --border: #E9EDEF;
+  --shadow: rgba(11, 20, 26, 0.08);
+  --blue:#1F5CEF;
 }
 
 @media (max-width: 1080px) {
@@ -26,17 +33,19 @@
 
 body {
   background: var(--bg);
+  -webkit-font-smoothing: antialiased;
 }
 
 body, input, textarea, button {
-  font: 400 1rem Roboto, sans-serif;
-  color: var(--white);
+  font: 400 1rem 'Segoe UI', Roboto, sans-serif;
+  color: var(--text-primary);
+  line-height: 1.5;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   font-family: Roboto, sans-serif;
-  color: var(--white)
+  color: var(--text-primary);
 }
 
 h1 {
@@ -69,22 +78,38 @@ ul, li {
 }
 
 button {
-  background-color: var(--green);
-  font-size: 1.2rem;
-  font-weight: bold;
+  background-color: var(--primary);
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 600;
   border: 0;
-  border-radius: 12px;
+  border-radius: 24px;
   width: fit-content;
-  padding: 0.8rem 1rem;
-  transition: filter .2s;
+  padding: 0.8rem 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px var(--shadow);
 
   &:disabled {
-    background-color: var(--gray-100);
-    cursor: initial;
+    background-color: var(--text-secondary);
+    opacity: 0.6;
+    cursor: not-allowed;
   }
 
   &:hover:not(:disabled) {
-    filter: brightness(1.2);
+    background-color: var(--primary-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px var(--shadow);
+  }
+
+  &.secondary {
+    background-color: var(--surface-variant);
+    color: var(--text-primary);
+    border: 1px solid var(--border);
+
+    &:hover:not(:disabled) {
+      background-color: var(--border);
+      transform: translateY(-1px);
+    }
   }
 }
 

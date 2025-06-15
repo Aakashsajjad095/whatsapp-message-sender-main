@@ -18,26 +18,31 @@ function Header() {
   return (
     <header className='headerContainer'>
       <div className='header'>
-        <div>
-          <img src='assets/logo-full.png' />
-          <h1>Teamstrak WhatsApp BulkSender</h1>
+        <div className='logo-container'>
+          <img src='assets/logo-full.png' alt='WhatsApp Bulk Sender Logo' />
+          <div className='title-container'>
+            <h1>WhatsApp Bulk Sender</h1>
+            <span>by Teamstrak</span>
+          </div>
         </div>
         <Link to='/config'>
           <BiCog size={32} className='icon' />
         </Link>
       </div>
-      <div className='tabsNavigation'>
-        <Link to='/' style={{ width: '100%' }}>
-          <div className={isHomePath ? 'active' : ''}>
-            <h2>Contact</h2>
+      <nav className='tabsNavigation'>
+        <Link to='/' className='nav-link'>
+          <div className={`tab ${isHomePath ? 'active' : ''}`}>
+            <h2>Contacts</h2>
+            <div className='indicator'></div>
           </div>
         </Link>
-        <Link to='/message' style={{ width: '100%' }}>
-          <div className={isMessagePath ? 'active' : ''}>
+        <Link to='/message' className='nav-link'>
+          <div className={`tab ${isMessagePath ? 'active' : ''}`}>
             <h2>Message</h2>
+            <div className='indicator'></div>
           </div>
         </Link>
-      </div>
+      </nav>
     </header>
   );
 }

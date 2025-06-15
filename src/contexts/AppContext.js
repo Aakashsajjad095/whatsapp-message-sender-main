@@ -28,7 +28,7 @@ export function AppContextProvider({ children }) {
   function saveMessage(message) {
     setMessageSaved(message);
     setIsMessageConfigured(true);
-    alert(`A mensagem: "${message}" foi salva!`);
+    alert(`The message: "${message}" has been saved!`);
   }
 
   function propertyVerification(property, object) {

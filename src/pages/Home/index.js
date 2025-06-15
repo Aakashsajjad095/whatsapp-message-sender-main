@@ -14,17 +14,22 @@ function Home() {
       <div className='contactsContainer'>
         <div>
           <h2>Upload .xlsx or .xls file</h2>
-          <button onClick={selectFile} type='button'>
-            {!isListLoaded ? 'Select file from computer' : 'Select a new file'}
+          <button onClick={selectFile} type='button' className='secondary'>
+            {!isListLoaded ? '📄 Select file from computer' : '📄 Select a new file'}
           </button>
-          <p>
-            WARNING! The file must contain the columns <strong>name</strong> and{' '}
-            <strong>phone</strong> as headers (first cell of the column). 
-            Every phone number must include the area code.
-          </p>
+          <div className="file-requirements">
+  <h3>📋 File Requirements</h3>
+  {/* <ul> */}
+    <li>
+      The file must include two columns with headers: <strong>CompanyName</strong> and <strong>ContactNumber</strong>,
+      headers must be in the first row of the file,
+      and phone numbers must include the area code.
+    </li>
+  {/* </ul> */}
+</div>
           <span className="spanContacts">{listJSON.length} contacts found</span>
-        </div>
-        <div>
+
+          <div>
           <h2>Contact List:</h2>
           <ul>
             {listJSON.length > 0 ?
@@ -38,6 +43,9 @@ function Home() {
               }) : <p style={{color: 'var(--gray-100)'}}>No contacts. Select a contact list file to get started.</p>}
           </ul>
         </div>
+
+        </div>
+     
       </div>
       <FooterButton />
     </div>

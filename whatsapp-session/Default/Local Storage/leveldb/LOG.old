@@ -1,3 +1,6 @@
-2025/06/12-16:32:08.901 37f04 Reusing MANIFEST /Users/aakash/Downloads/whatsapp-message-sender-main/whatsapp-session/Default/Local Storage/leveldb/MANIFEST-000001
-2025/06/12-16:32:08.903 37f04 Recovering log #7
-2025/06/12-16:32:08.904 37f04 Reusing old log /Users/aakash/Downloads/whatsapp-message-sender-main/whatsapp-session/Default/Local Storage/leveldb/000007.log 
+2025/06/12-17:36:35.724 4206d Reusing MANIFEST /Users/aakash/Downloads/whatsapp-message-sender-main/whatsapp-session/Default/Local Storage/leveldb/MANIFEST-000001
+2025/06/12-17:36:35.726 4206d Recovering log #7
+2025/06/12-17:36:35.727 4206d Reusing old log /Users/aakash/Downloads/whatsapp-message-sender-main/whatsapp-session/Default/Local Storage/leveldb/000007.log 
+2025/06/12-17:40:04.182 4206f Level-0 table #11: started
+2025/06/12-17:40:04.185 4206f Level-0 table #11: 18123 bytes OK
+2025/06/12-17:40:04.186 4206f Delete type=0 #7

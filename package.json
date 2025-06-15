@@ -1,8 +1,8 @@
 {
-  "name": "whatsapp-message-sender",
+  "name": "whatsapp-bulk-sender",
   "version": "1.0.0",
-  "authors": "LF Verissimo",
-  "description": "Application to send automatic messages.",
+  "authors": "Aakash Sajjad",
+  "description": "Application to send automatic messages on whatsapp.",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,15 +13,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/luizfverissimo/whatsapp-message-sender.git"
+    "url": "git+https://github.com/Aakashsajjad095/whatsapp-message-sender.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/luizfverissimo/whatsapp-message-sender/issues"
+    "url": "https://github.com/Aakashsajjad095/whatsapp-message-sender/issues"
   },
-  "homepage": "https://github.com/luizfverissimo/whatsapp-message-sender#readme",
+  "homepage": "https://github.com/Aakashsajjad095/whatsapp-message-sender#readme",
   "devDependencies": {
     "@babel/core": "^7.13.16",
     "@babel/preset-env": "^7.13.15",
@@ -55,7 +55,11 @@
   "config": {
     "forge": {
       "packagerConfig": {
-        "icon": "assets/icon.ico"
+        "icon": "assets/icon.ico",
+         "asar": true,
+        "asarUnpack": [
+          "**/{locate-chrome,locate-chrome/**}"
+        ]
       },
       "makers": [
         {
